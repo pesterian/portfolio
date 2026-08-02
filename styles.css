@@ -1,0 +1,513 @@
+.playlist-note{
+
+    margin-bottom:5rem;
+
+}
+
+.playlist-note p{
+
+    font-size:1.5rem;
+
+}
+
+.playlist-note a{
+
+    color:#FF0000;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+}
+
+.playlist-note a:hover{
+
+    text-decoration:underline;
+
+}
+
+
+/* ===========================
+   FONTS & VARIABLES
+=========================== */
+
+:root {
+
+    --white: #ffffff;
+
+    --black: #101010;
+
+    /* Mandarin inspired */
+    --orange: #F57C00;
+    --orange-light: #FFB347;
+
+    /* Mandarin leaf */
+    --green: #6BA539;
+    --green-light: #A5D96A;
+
+    --max-width: 1300px;
+
+}
+
+*,
+*::before,
+*::after{
+
+    box-sizing:border-box;
+
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    margin:0;
+
+    background:var(--white);
+
+    color:var(--black);
+
+    font-family:"Newsreader",serif;
+
+    overflow-x:hidden;
+
+}
+
+/* ===========================
+   TYPOGRAPHY
+=========================== */
+
+h1,
+h2,
+h3{
+
+    font-family:"Fraunces",serif;
+
+    font-weight:900;
+
+    letter-spacing:-.06em;
+
+    margin:0;
+
+}
+
+h1{
+
+    font-size:clamp(7rem,16vw,14rem);
+
+    line-height:.8;
+
+}
+
+h2{
+
+    font-size:clamp(4rem,9vw,7rem);
+
+    margin-bottom:4rem;
+
+}
+
+h3{
+
+    font-size:clamp(2rem,4vw,3rem);
+
+}
+
+p{
+
+    font-size:clamp(1.3rem,2vw,1.8rem);
+
+    line-height:1.5;
+
+}
+
+/* ===========================
+   LAYOUT
+=========================== */
+
+section{
+
+    position:relative;
+
+    min-height:70vh;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:5rem 0;
+
+}
+
+.container{
+
+    width:min(var(--max-width),90vw);
+
+    margin:auto;
+
+}
+
+/* ===========================
+   HERO
+=========================== */
+
+.hero{
+
+    overflow:hidden;
+
+}
+
+.subtitle{
+
+    font-size:clamp(1.8rem,3vw,2.6rem);
+
+    max-width:700px;
+
+    margin-top:2rem;
+
+}
+
+.green{
+
+    color:var(--green);
+
+}
+
+.orange{
+
+    color:var(--orange);
+
+}
+
+
+/* ===========================
+   ABOUT
+=========================== */
+
+.about p{
+
+    max-width:900px;
+
+}
+
+/* ===========================
+   SKILLS
+=========================== */
+
+.skills-cloud{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:1.3rem 2rem;
+
+    align-items:center;
+
+}
+
+.skills-cloud span{
+
+    font-family:"Fraunces",serif;
+
+    font-weight:900;
+
+    letter-spacing:-.04em;
+
+    transition:.2s ease;
+
+    cursor:default;
+
+}
+
+.skills-cloud span:hover{
+
+    transform:
+
+        translateY(-6px)
+
+        rotate(-2deg);
+
+}
+
+.xl{
+
+    font-size:clamp(3rem,6vw,5.5rem);
+
+}
+
+.lg{
+
+    font-size:clamp(2.2rem,5vw,4rem);
+
+}
+
+.md{
+
+    font-size:clamp(1.7rem,3vw,2.6rem);
+
+}
+
+.skills-cloud span:nth-child(3n){
+
+    color:var(--green);
+
+}
+
+.skills-cloud span:nth-child(2n){
+
+    color:var(--orange);
+
+}
+
+/* ===========================
+   EXPERIENCE
+=========================== */
+
+.job{
+
+    margin-bottom:5rem;
+
+}
+
+.job-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:flex-end;
+
+    flex-wrap:wrap;
+
+    margin-bottom:1rem;
+
+}
+
+.job-header span{
+
+    font-size:1.2rem;
+
+    color:#666;
+
+    font-weight:bold;
+
+}
+
+.divider{
+
+    height:6px;
+
+    width:180px;
+
+    background:linear-gradient(
+
+        90deg,
+
+        var(--green),
+
+        var(--orange)
+
+    );
+
+    margin:4rem 0;
+
+    border-radius:999px;
+
+}
+
+/* ===========================
+   MUSIC
+=========================== */
+
+.album{
+
+    display:grid;
+
+    grid-template-columns:1fr 340px;
+
+    gap:4rem;
+
+    align-items:center;
+
+    margin-bottom:8rem;
+
+}
+
+.album h3{
+
+    color:var(--orange);
+
+    margin-bottom:1rem;
+
+}
+
+.album img{
+
+    width:100%;
+
+    border-radius:28px;
+
+    transition:.25s ease;
+
+    box-shadow:
+
+        0 20px 40px rgba(0,0,0,.15);
+
+}
+
+.album img:hover{
+
+    transform:
+
+        rotate(-2deg)
+
+        scale(1.03);
+
+}
+
+/* ===========================
+   CONTACT
+=========================== */
+
+.links{
+
+    display:flex;
+
+    gap:2rem;
+
+    flex-wrap:wrap;
+
+}
+
+.links a{
+
+    text-decoration:none;
+
+    color:var(--black);
+
+    font-family:"Fraunces",serif;
+
+    font-size:2rem;
+
+    transition:.2s;
+
+}
+
+.links a:hover{
+
+    color:var(--orange);
+
+    transform:translateY(-4px);
+
+}
+
+/* ===========================
+   DECORATIVE UNDERLINES
+=========================== */
+
+h2::after{
+
+    content:"";
+
+    display:block;
+
+    width:120px;
+
+    height:10px;
+
+    margin-top:16px;
+
+    background:
+
+        linear-gradient(
+
+            90deg,
+
+            var(--green),
+
+            var(--orange)
+
+        );
+
+    border-radius:999px;
+
+}
+
+/* ===========================
+   SUBTLE FADE-IN
+=========================== */
+
+section{
+
+    animation:fadeUp .8s ease;
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(20px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media (max-width:900px){
+
+    h1{
+
+        font-size:5rem;
+
+    }
+
+    h2{
+
+        font-size:3rem;
+
+    }
+
+    .album{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .album img{
+
+        max-width:350px;
+
+    }
+
+    .job-header{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:.5rem;
+
+    }
+
+}
