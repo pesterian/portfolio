@@ -409,6 +409,39 @@ section{
 
 }
 
+.album figcaption {
+    margin-top: .75rem;
+
+    font-size: .9rem;
+    color: #777;
+
+    line-height: 1.5;
+
+    max-width: 90%;
+}
+
+.caption-note a{
+
+    text-decoration:none;
+
+    color:var(#777);
+
+    font-family:"Fraunces",serif;
+
+    font-size:.9rem;
+
+    transition:.2s;
+
+}
+
+.links a:hover{
+
+    color:var(--orange);
+
+    transform:translateY(-4px);
+
+}
+
 /* ===========================
    CONTACT
 =========================== */
