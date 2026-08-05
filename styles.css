@@ -163,6 +163,28 @@ section{
 
 }
 
+.hero .container {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-image {
+    width: 380px;
+    flex-shrink: 0;
+}
+
+.hero-image img {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
 .subtitle{
 
     font-size:clamp(1.8rem,3vw,2.6rem);
@@ -183,6 +205,21 @@ section{
 
     color:var(--orange);
 
+}
+
+.hero-image {
+    flex: 1;
+}
+
+.hero-image img {
+    width: 100%;
+    display: block;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.hero-text {
+    flex: 0 0 auto;
 }
 
 
