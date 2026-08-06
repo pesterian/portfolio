@@ -154,6 +154,138 @@ section{
 }
 
 /* ===========================
+   TOP NAV
+=========================== */
+
+.top-nav{
+
+    position:sticky;
+
+    top:0;
+
+    z-index:1000;
+
+    padding:1.2rem 0;
+
+    border-bottom:1px solid rgba(0,0,0,.08);
+
+    background:rgba(255,255,255,.94);
+
+    backdrop-filter:blur(6px);
+
+    transition:transform .28s ease;
+
+}
+
+.top-nav.top-nav-hidden{
+
+    transform:translateY(-100%);
+
+}
+
+.top-nav .container{
+
+    display:flex;
+
+    gap:1.1rem;
+
+    flex-wrap:wrap;
+
+}
+
+.top-nav a{
+
+    text-decoration:none;
+
+    color:var(--black);
+
+    font-family:"Fraunces",serif;
+
+    font-size:1.1rem;
+
+    transition:.2s;
+
+}
+
+.top-nav .site-gag{
+
+    order:-1;
+
+    position:relative;
+
+    font-family:"Fraunces",serif;
+
+    font-size:1.1rem;
+
+    color:#666;
+
+    text-transform:lowercase;
+
+    margin:0;
+
+    margin-right:auto;
+
+}
+
+.top-nav .gag-tooltip{
+
+    position:absolute;
+
+    top:calc(100% + .45rem);
+
+    left:0;
+
+    width:min(92vw,620px);
+
+    padding:.55rem .8rem;
+
+    border:1px solid rgba(0,0,0,.12);
+
+    border-radius:10px;
+
+    background:rgba(255,255,255,.97);
+
+    color:#555;
+
+    font-family:"Newsreader",serif;
+
+    font-size:1rem;
+
+    line-height:1.3;
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transform:translateY(-4px);
+
+    transition:opacity .2s ease, transform .2s ease, visibility .2s ease;
+
+    pointer-events:none;
+
+    box-shadow:0 8px 22px rgba(0,0,0,.08);
+
+}
+
+.top-nav .gag-tooltip.is-visible{
+
+    opacity:1;
+
+    visibility:visible;
+
+    transform:translateY(0);
+
+}
+
+.top-nav a:hover{
+
+    color:var(--orange);
+
+    transform:translateY(-2px);
+
+}
+
+/* ===========================
    HERO
 =========================== */
 

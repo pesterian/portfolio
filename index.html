@@ -22,6 +22,22 @@
 
 <body>
 
+    <nav class="top-nav">
+        <div class="container">
+            <a href="#find-me">Find Me</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#experience">Experience</a>
+            <a href="#projects">Projects</a>
+            <a href="#certificates">Certificates</a>
+            <a href="#discography">Discography</a>
+            <p class="site-gag">
+                pesterian
+                <span class="gag-tooltip" role="tooltip">This would link to my website but that's where you are now</span>
+            </p>
+        </div>
+    </nav>
+
     <!-- ================= HERO ================= -->
 
    <section class="hero">
@@ -49,7 +65,7 @@
         <!-- ================= FIND ME ================= -->
 
 
-    <section class="contact">
+    <section class="contact" id="find-me">
 
     <div class="container">
 
@@ -71,7 +87,7 @@
 
     <!-- ================= ABOUT ================= -->
 
-    <section class="about">
+    <section class="about" id="about">
 
         <div class="container">
 
@@ -97,7 +113,7 @@
 
     <!-- ================= SKILLS ================= -->
 
-    <section class="skills-section">
+    <section class="skills-section" id="skills">
 
         <div class="container">
 
@@ -154,7 +170,7 @@
 
     <!-- ================= EXPERIENCE ================= -->
 
-    <section class="experience">
+    <section class="experience" id="experience">
 
         <div class="container">
 
@@ -164,21 +180,18 @@
 
                 <div class="job-header">
 
-                    <h3>Banque Misr</h3>
+                    <h3>Cloud &amp; Custom Apps Intern | Capgemini Egypt</h3>
 
-                    <span>2025 · Remote</span>
+                    <span>2026 · Hybrid</span>
 
                 </div>
 
                 <p>
+                    Primarily built the frontend of an enterprise conference-room reservation system using Angular 17 (standalone components, signals, reactive forms) with PrimeNG, on a 4-person Agile team paired with another frontend developer against a Spring Boot + H2 backend; also contributed on the backend.
 
-                    Developed a modular Hospital Management System backend
-                    using Java Spring Boot.
+                    Implemented booking UI flows including a PrimeNG dialog-based reservation form, working within enterprise Git workflows and component-based architecture.
 
-                    Worked extensively with Spring Security, JWT,
-                    Docker, MySQL, REST APIs and automated testing while
-                    learning scalable backend architecture, software testing
-                    and Agile development practices.
+                    Gained hands-on experience with real corporate development practices: sprint planning, code review, and cross-team coordination with backend engineers.
 
                 </p>
 
@@ -190,23 +203,218 @@
 
                 <div class="job-header">
 
-                    <h3>Capgemini Egypt</h3>
+                    <h3>Backend Development Trainee | Banque Misr</h3>
 
-                    <span>2026 · Hybrid</span>
+                    <span>2025 · Remote</span>
 
                 </div>
 
                 <p>
+                    Learned backend fundamentals with Java Spring Boot: REST API design, JWT-based authentication, and role-based authorization with Spring Security, applied on a multi-role Hospital Management System project (see Projects).
 
-                    Cloud and Custom Apps Intern at Capgemini Egypt.
+                    Learned relational and non-relational database concepts: SQL with MySQL, NoSQL with MongoDB, and database design; also learned unit/integration testing (JUnit 5, Mockito) and Docker containerization.
 
-                    Contributed to an enterprise conference room reservation
-                    system using Angular, TypeScript, PrimeNG and Spring Boot.
+                    Learned core software engineering practices: Git, Postman, and Swagger for API documentation and testing; client-server (CSR) vs. MVC architecture; and Waterfall vs. Agile development methodologies.
 
-                    Gained experience collaborating in Agile teams, enterprise
-                    Git workflows, component architecture and partaking in a 
-                    real coporate environment.
+                </p>
 
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= PROJECTS ================= -->
+
+    <section class="projects" id="projects">
+
+        <div class="container">
+
+            <h2>PROJECTS</h2>
+
+            <div class="job">
+
+                <div class="job-header">
+
+                    <h3>Hospital Management System</h3>
+
+                    <span>Java · Spring Boot · Spring Security · MySQL · Docker</span>
+
+                </div>
+
+                <p>
+                    Team-built REST API for a hospital system with multi-role authentication (Admin, Doctor, Patient, Pharmacy), appointments, prescriptions, pharmacy/orders, and messaging; personally designed the DTO layer defining the API's request/response contracts. Built as part of the Banque Misr backend training program.
+                </p>
+
+                <div class="links">
+                    <a href="https://github.com/ahmedellkady/Sprints-Grad-Project-Team-4" target="_blank" rel="noreferrer">GitHub repository</a>
+                </div>
+
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="job">
+
+                <div class="job-header">
+
+                    <h3>Capgemini Rooms Admin Prototype</h3>
+
+                    <span>Angular 17 · PrimeNG · TypeScript</span>
+
+                </div>
+
+                <p>
+                    Rebuilt a stripped-down version of an internal admin "add rooms" page from the Capgemini internship as a standalone showcase, using standalone components, Angular Router, and Reactive Forms.
+                </p>
+
+                <div class="links">
+                    <a href="https://github.com/pesterian/cgproject" target="_blank" rel="noreferrer">GitHub repository</a>
+                </div>
+
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="job">
+
+                <div class="job-header">
+
+                    <h3>Numerical Solver</h3>
+
+                    <span>C++17 · Qt 6 · CMake</span>
+
+                </div>
+
+                <p>
+                    Contributed bug fixes and improvements (merged upstream) to a Qt-based desktop app implementing root-finding, linear-system, and optimization methods, working alongside the project owner as a collaborative university project.
+                </p>
+
+                <div class="links">
+                    <a href="https://github.com/pesterian/numericalsolver" target="_blank" rel="noreferrer">GitHub repository</a>
+                </div>
+
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="job">
+
+                <div class="job-header">
+
+                    <h3>bombocord2</h3>
+
+                    <span>Python · discord.py</span>
+
+                </div>
+
+                <p>
+                    Built and maintain a Discord bot with a slash-command dictionary system, admin CRUD tooling, and a modular, dependency-isolated codebase for easy extension.
+                    AI branch has been added to provide a conversational interface for users to interact with the bot.
+                </p>
+
+                <div class="links">
+                    <a href="https://github.com/pesterian/bombocord2" target="_blank" rel="noreferrer">GitHub repository</a>
+                </div>
+
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="job">
+
+                <div class="job-header">
+
+                    <h3>Personal Portfolio</h3>
+
+                    <span>HTML · CSS · Vanilla JavaScript</span>
+
+                </div>
+
+                <p>
+                    Designed and built a personal portfolio site to showcase development work and music production, deployed via GitHub Pages.
+                </p>
+
+                <div class="links">
+                    <a href="https://github.com/pesterian/portfolio" target="_blank" rel="noreferrer">GitHub repository</a>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= CERTIFICATES ================= -->
+
+    <section class="certificates" id="certificates">
+
+        <div class="container">
+
+            <h2>CERTIFICATES</h2>
+
+            <div class="job">
+
+                <div class="job-header">
+
+                    <h3>Angular Fundamentals</h3>
+
+                    <span>Master.dev (Frontend Masters) · Jul 2026</span>
+
+                </div>
+
+                <p>
+                    Instructor: Mark "Techson" Thompson.
+                </p>
+
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="job">
+
+                <div class="job-header">
+
+                    <h3>Spring Boot Development</h3>
+
+                    <span>Sprints.ai</span>
+
+                </div>
+
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="job">
+
+                <div class="job-header">
+
+                    <h3>Cloud &amp; Custom Apps Internship</h3>
+
+                    <span>Capgemini Egypt</span>
+
+                </div>
+
+                <p>
+                    Certificate pending issuance.
+                </p>
+
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="job">
+
+                <div class="job-header">
+
+                    <h3>CS50x: Introduction to Computer Science</h3>
+
+                    <span>Harvard University</span>
+
+                </div>
+
+                <p>
+                    Coursework completed; certificate not purchased.
                 </p>
 
             </div>
@@ -217,7 +425,7 @@
 
     <!-- ================= MUSIC ================= -->
 
-    <section class="music">
+    <section class="music" id="discography">
 
         <div class="container">
 
@@ -420,5 +628,7 @@
         </div>
 
     </section>
+
+    <script src="script.js"></script>
 
    </html>
