@@ -399,9 +399,7 @@ section{
 
     transform:
 
-        translateY(-6px)
-
-        rotate(-2deg);
+    translateY(-6px);
 
 }
 
@@ -535,9 +533,7 @@ section{
 
     transform:
 
-        rotate(-2deg)
-
-        scale(1.03);
+    scale(1.03);
 
 }
 
