@@ -1,106 +1,97 @@
 const topNav = document.querySelector(".top-nav");
 
 if (topNav) {
-	let lastScrollY = window.scrollY;
-	const threshold = 8;
-	const revealOffset = 80;
+  let lastScrollY = window.scrollY;
+  const threshold = 8;
+  const revealOffset = 80;
 
-	window.addEventListener(
-		"scroll",
-		() => {
-			const currentScrollY = window.scrollY;
-			const scrollDelta = currentScrollY - lastScrollY;
+  window.addEventListener(
+    "scroll",
+    () => {
+      const currentScrollY = window.scrollY;
+      const scrollDelta = currentScrollY - lastScrollY;
 
-			if (Math.abs(scrollDelta) < threshold) {
-				return;
-			}
+      if (Math.abs(scrollDelta) < threshold) {
+        return;
+      }
 
-			if (scrollDelta > 0 && currentScrollY > revealOffset) {
-				topNav.classList.add("top-nav-hidden");
-			} else {
-				topNav.classList.remove("top-nav-hidden");
-			}
+      if (scrollDelta > 0 && currentScrollY > revealOffset) {
+        topNav.classList.add("top-nav-hidden");
+      } else {
+        topNav.classList.remove("top-nav-hidden");
+      }
 
-			lastScrollY = Math.max(currentScrollY, 0);
-		},
-		{ passive: true }
-	);
+      lastScrollY = Math.max(currentScrollY, 0);
+    },
+    { passive: true },
+  );
 }
 
 const siteGagLabel = document.querySelector(".site-gag");
 const gagTooltip = document.querySelector(".gag-tooltip");
 
 if (siteGagLabel && gagTooltip) {
-	let gagAutoCloseTimer = null;
-	const gagAutoCloseDelay = 3000;
+  let gagAutoCloseTimer = null;
+  const gagAutoCloseDelay = 3000;
 
-	const closeGagTooltip = () => {
-		if (gagAutoCloseTimer !== null) {
-			window.clearTimeout(gagAutoCloseTimer);
-			gagAutoCloseTimer = null;
-		}
+  const closeGagTooltip = () => {
+    if (gagAutoCloseTimer !== null) {
+      window.clearTimeout(gagAutoCloseTimer);
+      gagAutoCloseTimer = null;
+    }
 
-		gagTooltip.classList.remove("is-visible");
-		siteGagLabel.setAttribute("aria-expanded", "false");
-	};
+    gagTooltip.classList.remove("is-visible");
+    siteGagLabel.setAttribute("aria-expanded", "false");
+  };
 
-	const toggleGagTooltip = () => {
-		const isVisible = gagTooltip.classList.toggle("is-visible");
-		siteGagLabel.setAttribute("aria-expanded", String(isVisible));
+  const toggleGagTooltip = () => {
+    const isVisible = gagTooltip.classList.toggle("is-visible");
+    siteGagLabel.setAttribute("aria-expanded", String(isVisible));
 
-		if (gagAutoCloseTimer !== null) {
-			window.clearTimeout(gagAutoCloseTimer);
-			gagAutoCloseTimer = null;
-		}
+    if (gagAutoCloseTimer !== null) {
+      window.clearTimeout(gagAutoCloseTimer);
+      gagAutoCloseTimer = null;
+    }
 
-		if (isVisible) {
-			gagAutoCloseTimer = window.setTimeout(closeGagTooltip, gagAutoCloseDelay);
-		}
-	};
+    if (isVisible) {
+      gagAutoCloseTimer = window.setTimeout(closeGagTooltip, gagAutoCloseDelay);
+    }
+  };
 
-	siteGagLabel.addEventListener("click", (event) => {
-		event.stopPropagation();
-		toggleGagTooltip();
-	});
+  siteGagLabel.addEventListener("click", (event) => {
+    event.stopPropagation();
+    toggleGagTooltip();
+  });
 
-	siteGagLabel.addEventListener("keydown", (event) => {
-		if (event.key === "Enter" || event.key === " ") {
-			event.preventDefault();
-			toggleGagTooltip();
-		}
-	});
+  siteGagLabel.addEventListener("keydown", (event) => {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      toggleGagTooltip();
+    }
+  });
 
-	document.addEventListener("click", (event) => {
-		if (!siteGagLabel.contains(event.target)) {
-			closeGagTooltip();
-		}
-	});
+  document.addEventListener("click", (event) => {
+    if (!siteGagLabel.contains(event.target)) {
+      closeGagTooltip();
+    }
+  });
 
-	window.addEventListener("scroll", closeGagTooltip, { passive: true });
+  window.addEventListener("scroll", closeGagTooltip, { passive: true });
 }
 
 function randomizeSkillColors() {
-	const now = Date.now();
-	const cooldown = 3000;
+  const colors = ["green", "black", "orange"];
+  const skills = document.querySelectorAll(".skills-cloud span");
 
-	if (randomizeSkillColors.lastRun && now - randomizeSkillColors.lastRun < cooldown) {
-		return;
-	}
-
-	const colors = ["green", "black", "orange"];
-	const skills = document.querySelectorAll(".skills-cloud span");
-
-	skills.forEach((skill) => {
-		const color = colors[Math.floor(Math.random() * colors.length)];
-		skill.classList.remove("green", "black", "orange");
-		skill.classList.add(color);
-	});
-
-	randomizeSkillColors.lastRun = now;
+  skills.forEach((skill) => {
+    const color = colors[Math.floor(Math.random() * colors.length)];
+    skill.classList.remove("green", "black", "orange");
+    skill.classList.add(color);
+  });
 }
 
 randomizeSkillColors();
 
 document.querySelectorAll(".skills-cloud span").forEach((skill) => {
-	skill.addEventListener("pointerenter", randomizeSkillColors);
+  skill.addEventListener("pointerenter", randomizeSkillColors);
 });

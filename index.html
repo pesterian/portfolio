@@ -6,14 +6,14 @@
 
     <title>Ziyad Sherif</title>
 
-    <link rel="icon" type="image/x-icon" href="/assets/pgo.png" />
+    <link rel="icon" type="image/x-icon" href="assets/pgo.png" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
     <link
-      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,900&family=Newsreader:opsz,wght@6..72,wght@400;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,900&family=Newsreader:opsz,wght@6..72,400;6..72,600&display=swap"
       rel="stylesheet"
     />
 
@@ -31,9 +31,16 @@
         <a href="#certificates">Certificates</a>
         <a href="#education">Education</a>
         <a href="#discography">Discography</a>
-        <p class="site-gag">
+        <p
+          class="site-gag"
+          tabindex="0"
+          role="button"
+          aria-label="pesterian"
+          aria-expanded="false"
+          aria-describedby="gag-tooltip"
+        >
           pesterian
-          <span class="gag-tooltip" role="tooltip"
+          <span class="gag-tooltip" id="gag-tooltip" role="tooltip"
             >This would link to my website but that's where you are now...</span
           >
         </p>
@@ -55,11 +62,11 @@
             occasional hip hop beatmaker
           </p>
         </div>
-        <!----
+        <!--
         <div class="hero-image">
             <img src="assets/me.jpg" alt="Photo of Ziyad Sherif">
         </div>
-!---->
+-->
       </div>
     </section>
 
@@ -86,15 +93,12 @@
         <h2>ABOUT</h2>
 
         <p>
-          Computer Science student and Full-Stack Developer passionate about
-          building high-performance, intuitive web applications. I pride
-          myself on being tech-agnostic and quick to adapt, jumping across
-          stacks depending on what the problem requires. My experience ranges
-          from corporate software engineering environments to open-source
-          project maintenance, working fluently with technologies like Angular,
-          React, Astro, Spring Boot, and Node.js. I'm deeply driven by clean
-          software architecture, efficient developer tooling, and modern UI/UX
-          design.
+          Computer Science student and full-stack web developer. I pick up new
+          stacks quickly and I'm very quick to adapt to new technologies. I have
+          experience with a variety of technologies and frameworks, and I'm
+          always looking to expand my knowledge and skills. I care about clean
+          software architecture, good developer tooling, and well-designed
+          interfaces.
         </p>
       </div>
     </section>
@@ -120,7 +124,7 @@
 
           <span>ASTRO</span>
 
-          <span>11TY</span>
+          <span>ELEVENTY</span>
 
           <span>SPRING BOOT</span>
 
@@ -171,16 +175,12 @@
           </div>
 
           <p>
-            Owned the end-to-end development of the About Us page, from
-            implementation and component architecture to optimization and
-            refinement, translating UI/UX designs into a fully functional,
-            responsive experience. Built modular team grids and an animated team
-            carousel using Astro, React, and TypeScript, with custom event-based
-            communication between components. Contributed to debugging and
-            optimizing the main landing page and documentation portal, fixed
-            navigation issues, and refined UI consistency across the project's
-            web platforms. Collaborated through GitHub issues, pull requests,
-            code reviews, and CI/CD workflows.
+            Frontend developer on the team behind the P3D Project's web
+            platforms. Built the About Us page and contributed to the landing
+            page and documentation portal (details under
+            <a href="#p3d-web">p3d-web</a> and
+            <a href="#p3d-docs">p3d-docs</a>). Work is coordinated through
+            GitHub issues, pull requests, code reviews, and CI/CD workflows.
           </p>
         </div>
 
@@ -194,12 +194,12 @@
           </div>
 
           <p>
-            Completed a Software Engineering internship within Capgemini
-            Egypt's Cloud &amp; Custom Applications division. Contributed
-            primarily to the Angular frontend of an enterprise conference room
-            reservation system built with Angular 17, PrimeNG, TypeScript, and
-            Java Spring Boot. Developed reusable Angular components, Reactive
-            Forms with validation, TypeScript interfaces, and Angular services.
+            Completed a Software Engineering internship within Capgemini Egypt's
+            Cloud &amp; Custom Applications division. Contributed primarily to
+            the Angular frontend of an enterprise conference room reservation
+            system built with Angular 17, PrimeNG, TypeScript, and Java Spring
+            Boot. Developed reusable Angular components, Reactive Forms with
+            validation, TypeScript interfaces, and Angular services.
             Collaborated in a four-person Agile team using Git feature branches,
             pull requests, code integration, and regular code reviews.
           </p>
@@ -215,14 +215,14 @@
           </div>
 
           <p>
-            Completed the Sprints graduation project, developing a secure and
-            modular RESTful Hospital Management System API using Java Spring
-            Boot. Implemented layered backend architecture with Controllers,
-            Services, Repositories, DTOs, and Entity mapping, alongside Spring
-            Security and JWT-based role-based access control. Integrated Spring
-            Data JPA with MySQL, validation, exception handling, API response
-            management, automated tests with JUnit 5 and Mockito, and Docker
-            Compose deployment workflows.
+            Completed the Sprints graduation project, a secure, modular RESTful
+            API built with Java Spring Boot (see
+            <a href="#hospital-management-system">Hospital Management System</a
+            >). Implemented a layered architecture with controllers, services,
+            repositories, DTOs, and entity mapping, Spring Security with
+            JWT-based role-based access control, Spring Data JPA with MySQL,
+            validation and exception handling, automated tests with JUnit 5 and
+            Mockito, and Docker Compose deployment.
           </p>
         </div>
       </div>
@@ -234,7 +234,7 @@
       <div class="container">
         <h2>PROJECTS</h2>
 
-        <div class="job">
+        <div class="job" id="hospital-management-system">
           <div class="job-header">
             <h3>Hospital Management System</h3>
 
@@ -293,15 +293,14 @@
           </div>
 
           <p>
-            Contributing frontend work to the project's main gateway site, which
-            serves as the primary distribution point for project updates. I
-            owned the About Us page from start to finish, translating the UI/UX
-            designs into a responsive experience and building modular team
-            grids alongside an animated team carousel. The work used Astro,
-            React, and TypeScript, including custom event-based communication
-            between components. I also helped debug and optimize the main
-            landing page, fixed navigation issues, and refined UI consistency
-            across the site.
+            Frontend work on the project's main gateway site, the primary
+            distribution point for project updates. I owned the About Us page
+            from start to finish, translating the UI/UX designs into a
+            responsive experience and building modular team grids alongside an
+            animated team carousel. The work used Astro, React, and TypeScript,
+            including custom event-based communication between components. I
+            also helped debug and optimize the main landing page, fixed
+            navigation issues, and refined UI consistency across the site.
           </p>
 
           <div class="links">
@@ -328,8 +327,7 @@
             distributes team setup guides and codebase references for
             contributors across the project. I contributed to debugging and
             optimizing the documentation portal, while helping keep its
-            navigation and UI consistent with the project's other web
-            platforms.
+            navigation and UI consistent with the project's other web platforms.
           </p>
 
           <div class="links">
@@ -393,7 +391,6 @@
             >
           </div>
         </div>
-
       </div>
     </section>
     <!-- ================= CERTIFICATES ================= -->
@@ -406,12 +403,12 @@
           <div class="job-header">
             <h3>Angular Fundamentals</h3>
 
-            <span>Rowad 2025 Internship Program</span>
+            <span
+              >Rowad 2025 Internship Program · Certificate of completion</span
+            >
           </div>
-
-          <p>Certificate of completion.</p>
         </div>
-        
+
         <div class="divider"></div>
 
         <div class="job">
@@ -428,10 +425,8 @@
           <div class="job-header">
             <h3>Summer 2026 Internship Program</h3>
 
-            <span>Capgemini Egypt</span>
+            <span>Capgemini Egypt · Certificate of completion</span>
           </div>
-
-          <p>Certificate of completion.</p>
         </div>
 
         <div class="divider"></div>
@@ -442,8 +437,6 @@
 
             <span>Course completed</span>
           </div>
-
-          <p></p>
         </div>
 
         <div class="divider"></div>
@@ -517,42 +510,48 @@
               making. It's a sound I've continued to explore ever since.
             </p>
 
-            <p>
-              The album originally started as a heartbreak project called
-              <em>red hairs</em>. I still have some of the early lyrics and
-              beats from that version, but RHV2 evolved into something much more
-              polished with a stronger sense of direction.
-            </p>
+            <details class="read-more">
+              <summary>Read more</summary>
 
-            <p>
-              Rather than relying on lyrics, I wanted the samples and
-              instrumentals to tell a story that the listener could piece
-              together with enough attention. It isn't an especially meticulous
-              or carefully planned instrumental album, because this version was
-              originally meant to have vocals. I ultimately decided against
-              including them, but I think the music still tells a complete
-              enough story on its own.
-            </p>
+              <p>
+                The album originally started as a heartbreak project called
+                <em>red hairs</em>. I still have some of the early lyrics and
+                beats from that version, but RHV2 evolved into something much
+                more polished with a stronger sense of direction.
+              </p>
 
-            <p>
-              Looking back, this was the project where I discovered myself as
-              both a beatmaker and a person, shaping the sound, structure, and
-              creative approach I still use today.
-            </p>
+              <p>
+                Rather than relying on lyrics, I wanted the samples and
+                instrumentals to tell a story that the listener could piece
+                together with enough attention. It isn't an especially
+                meticulous or carefully planned instrumental album, because this
+                version was originally meant to have vocals. I ultimately
+                decided against including them, but I think the music still
+                tells a complete enough story on its own.
+              </p>
+
+              <p>
+                Looking back, this was the project where I discovered myself as
+                both a beatmaker and a person, shaping the sound, structure, and
+                creative approach I still use today.
+              </p>
+            </details>
           </div>
           <figure>
             <a href="https://www.youtube.com/watch?v=P5VE7vbu8uQ&t=859s">
               <img src="assets/rhv2.jpg" alt="RHV2 Album Cover" />
             </a>
             <figcaption>
-              This is a picture me and my friend taken in 2025. I chose it as
-              the album cover because it was the most recent picture I had of me
-              sharing a sweet, simple moment with someone just eating tangerines
-              with cute dog forks.
-            </figcaption>
-            <figcaption>
-              This album cover is actually the inspiration behind the orange and
-              green color scheme of this website.
+              <p>
+                This is a picture me and my friend taken in 2025. I chose it as
+                the album cover because it was the most recent picture I had of
+                me sharing a sweet, simple moment with someone just eating
+                tangerines with cute dog forks.
+              </p>
+              <p>
+                This album cover is actually the inspiration behind the orange
+                and green color scheme of this website.
+              </p>
             </figcaption>
           </figure>
         </div>
@@ -566,44 +565,47 @@
               while exploring styles I'd never experimented with before.
             </p>
 
-            <p>
-              During its production, I met clockwize, who contributed to one of
-              the tracks and helped shape the project through his suggestions
-              and feedback. I'd link his work, but despite my constant attempts
-              to get him to upload his stuff to YouTube, he just won't. 🤷‍♂️
-            </p>
+            <details class="read-more">
+              <summary>Read more</summary>
 
-            <p>
-              Although it isn't as personal as my previous work, I don't think
-              every project has to be an emotional deconstruction of myself.
-              Sometimes you just have to have fun with it! Some of my most
-              polished, grand-sounding beats sit alongside some of my most
-              minimal back-to-the-basics ones, creating a contrast that gives
-              the project a more energetic and cohesive identity despite leaning
-              closer to a beat tape than a traditional album.
-            </p>
+              <p>
+                During its production, I met clockwize, who contributed to one
+                of the tracks and helped shape the project through his
+                suggestions and feedback. I'd link his work, but despite my
+                constant attempts to get him to upload his stuff to YouTube, he
+                just won't. 🤷‍♂️
+              </p>
+
+              <p>
+                Although it isn't as personal as my previous work, I don't think
+                every project has to be an emotional deconstruction of myself.
+                Sometimes you just have to have fun with it! Some of my most
+                polished, grand-sounding beats sit alongside some of my most
+                minimal back-to-the-basics ones, creating a contrast that gives
+                the project a more energetic and cohesive identity despite
+                leaning closer to a beat tape than a traditional album.
+              </p>
+            </details>
           </div>
           <figure>
             <a href="https://www.youtube.com/watch?v=rVb7W624e5U">
               <img src="assets/pestohat.jpg" alt="pestoهات Album Cover" />
             </a>
             <figcaption>
-              This is Japanese Islamicate calligraphy by Naoki Yamamoto.
-            </figcaption>
-            <figcaption>
-              I feel like it fits since the opening track samples a Japanese
-              song, and it's simultaneously Arabic calligraphy when rotated 90
-              degrees.
-            </figcaption>
-            <div class="caption-note">
-              <figcaption>
+              <p>This is Japanese Islamicate calligraphy by Naoki Yamamoto.</p>
+              <p>
+                I feel like it fits since the opening track samples a Japanese
+                song, and it's simultaneously Arabic calligraphy when rotated 90
+                degrees.
+              </p>
+              <p class="caption-note">
                 <a
                   href="https://fxtwitter.com/NaokiQYamamoto/status/2063334527611592885?s=20"
                 >
                   Here's the original artwork.
                 </a>
-              </figcaption>
-            </div>
+              </p>
+            </figcaption>
           </figure>
         </div>
 
@@ -618,49 +620,54 @@
               I'd probably be making something that was true to myself.
             </p>
 
-            <p>
-              This is my favorite and probably best work to date. It feels like
-              the culmination of everything I want my music to be.
-            </p>
+            <details class="read-more">
+              <summary>Read more</summary>
 
-            <p>
-              This project sits somewhere between RHV2 and pestoهات in terms of
-              emotional relevance. I made it while turning twenty and trying to
-              come to terms with the fact that I was no longer a teenager and
-              that things were starting to get real. You could think of it as
-              one last grasp at the rebellious spirit I always thought I had.
-            </p>
+              <p>
+                This is my favorite and probably best work to date. It feels
+                like the culmination of everything I want my music to be.
+              </p>
 
-            <p>
-              More than anything, this was the project where everything finally
-              came together. I wasn't chasing technical improvement like I was
-              on pestoهات, and I wasn't looking inward as much as I did on RHV2.
-              I already knew the kind of music I wanted to make, so I could
-              focus on bringing that vision to life.
-            </p>
+              <p>
+                This project sits somewhere between RHV2 and pestoهات in terms
+                of emotional relevance. I made it while turning twenty and
+                trying to come to terms with the fact that I was no longer a
+                teenager and that things were starting to get real. You could
+                think of it as one last grasp at the rebellious spirit I always
+                thought I had.
+              </p>
 
-            <p>
-              I think this is me at my most experimental. If throwing things at
-              the wall until they stuck was an album, it'd be this. I mixed
-              different genres with hip-hop and experimented with a much wider
-              variety of sounds, samples, and production techniques while still
-              not sounding all over the place—it still sounds like a
-              <em>Pesto</em> album. My personal highlights are the opening
-              two-parter, <em>what's on my mind is on there</em>, and the
-              ending.
-            </p>
+              <p>
+                More than anything, this was the project where everything
+                finally came together. I wasn't chasing technical improvement
+                like I was on pestoهات, and I wasn't looking inward as much as I
+                did on RHV2. I already knew the kind of music I wanted to make,
+                so I could focus on bringing that vision to life.
+              </p>
 
-            <p>
-              This was also the first time I didn't just dump the entire project
-              into a single video. Instead, I uploaded each track separately,
-              which I think is a much better way to present my work going
-              forward.
-            </p>
+              <p>
+                I think this is me at my most experimental. If throwing things
+                at the wall until they stuck was an album, it'd be this. I mixed
+                different genres with hip-hop and experimented with a much wider
+                variety of sounds, samples, and production techniques while
+                still not sounding all over the place—it still sounds like a
+                <em>Pesto</em> album. My personal highlights are the opening
+                two-parter, <em>what's on my mind is on there</em>, and the
+                ending.
+              </p>
 
-            <p>
-              Oh yeah, and clockwize is here again. Collaborating with me might
-              be the only way to get his work onto the internet.
-            </p>
+              <p>
+                This was also the first time I didn't just dump the entire
+                project into a single video. Instead, I uploaded each track
+                separately, which I think is a much better way to present my
+                work going forward.
+              </p>
+
+              <p>
+                Oh yeah, and clockwize is here again. Collaborating with me
+                might be the only way to get his work onto the internet.
+              </p>
+            </details>
           </div>
           <figure>
             <a
@@ -672,16 +679,15 @@
               />
             </a>
             <figcaption>
-              This is a self-portrait by a friend of mine.
-            </figcaption>
-            <figcaption>
-              I liked the blown out Y2K aesthetic and the early 2010s punk vibe.
-              It definitely captures that raw creative and uncompromising sense
-              of youth I was trying to convey.
+              <p>This is a self-portrait by a friend of mine.</p>
+              <p>
+                I liked the blown out Y2K aesthetic and the early 2010s punk
+                vibe. It definitely captures that raw creative and
+                uncompromising sense of youth I was trying to convey.
+              </p>
             </figcaption>
           </figure>
         </div>
-
       </div>
     </section>
 
