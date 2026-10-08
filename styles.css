@@ -12,15 +12,15 @@
 
 .playlist-note a{
 
-    color:#FF0000;
-
-    text-decoration:none;
+    color:var(--green);
 
     font-weight:bold;
 
 }
 
 .playlist-note a:hover{
+
+    color:var(--orange);
 
     text-decoration:underline;
 
@@ -74,6 +74,22 @@ body{
     font-family:"Newsreader",serif;
 
     overflow-x:hidden;
+
+}
+
+a{
+
+    color:var(--green);
+
+    text-decoration:underline;
+
+    transition:.2s;
+
+}
+
+a:hover{
+
+    color:var(--orange);
 
 }
 
@@ -333,6 +349,12 @@ section{
 
 }
 
+.black{
+
+    color:var(--black);
+
+}
+
 .orange{
 
     color:var(--orange);
@@ -383,6 +405,8 @@ section{
 
 .skills-cloud span{
 
+    font-size:clamp(2rem,3.5vw,3.5rem);
+
     font-family:"Fraunces",serif;
 
     font-weight:900;
@@ -400,36 +424,6 @@ section{
     transform:
 
     translateY(-6px);
-
-}
-
-.xl{
-
-    font-size:clamp(3rem,6vw,5.5rem);
-
-}
-
-.lg{
-
-    font-size:clamp(2.2rem,5vw,4rem);
-
-}
-
-.md{
-
-    font-size:clamp(1.7rem,3vw,2.6rem);
-
-}
-
-.skills-cloud span:nth-child(3n){
-
-    color:var(--green);
-
-}
-
-.skills-cloud span:nth-child(2n){
-
-    color:var(--orange);
 
 }
 
@@ -550,9 +544,7 @@ section{
 
 .caption-note a{
 
-    text-decoration:none;
-
-    color:#777;
+    color:var(--green);
 
     font-family:"Fraunces",serif;
 
@@ -586,9 +578,7 @@ section{
 
 .links a{
 
-    text-decoration:none;
-
-    color:var(--black);
+    color:var(--green);
 
     font-family:"Fraunces",serif;
 

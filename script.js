@@ -78,3 +78,29 @@ if (siteGagLabel && gagTooltip) {
 
 	window.addEventListener("scroll", closeGagTooltip, { passive: true });
 }
+
+function randomizeSkillColors() {
+	const now = Date.now();
+	const cooldown = 3000;
+
+	if (randomizeSkillColors.lastRun && now - randomizeSkillColors.lastRun < cooldown) {
+		return;
+	}
+
+	const colors = ["green", "black", "orange"];
+	const skills = document.querySelectorAll(".skills-cloud span");
+
+	skills.forEach((skill) => {
+		const color = colors[Math.floor(Math.random() * colors.length)];
+		skill.classList.remove("green", "black", "orange");
+		skill.classList.add(color);
+	});
+
+	randomizeSkillColors.lastRun = now;
+}
+
+randomizeSkillColors();
+
+document.querySelectorAll(".skills-cloud span").forEach((skill) => {
+	skill.addEventListener("pointerenter", randomizeSkillColors);
+});
